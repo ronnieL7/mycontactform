@@ -11,74 +11,85 @@
         }
     </style>
 </head>
-<body class="bg-white flex items-center justify-center min-h-screen">
+<body class="bg-white flex items-center justify-center min-h-screen p-8">
 
-    <div class="w-full max-w-xl p-6 bg-white border border-gray-200 rounded-xl shadow-lg">
-
+    <div class="w-full max-w-3xl bg-white border border-gray-200 rounded-xl shadow-lg">
+        
         <!-- Header -->
-        <h2 class="text-3xl font-bold text-center text-gray-800 mb-2">Register Now</h2>
-        <div class="flex flex-col items-center justify-center text-center text-gray-800 mb-6">
-            <span id="webinar-date" class="text-base font-semibold" style="color: #5C86F2;">Loading...</span>
-            <span id="webinar-time" class="text-sm font-medium" style="color: #5C86F2;"></span>
-        </div>
-
-        <!-- Details Section -->
-        <div class="space-y-2 mb-6">
-            <div class="flex items-center space-x-2 text-sm text-gray-500">
-                <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="currentColor">
-                    <path d="m620.12-320.15 34.73-34.73-150.47-150.65v-212.05h-47.96v232.93l163.7 164.5ZM480.09-124.08q-73.53 0-138.25-27.82-64.73-27.83-113.47-76.6-48.73-48.77-76.51-113.51-27.78-64.74-27.78-138.36 0-73.69 27.82-138.6 27.83-64.92 76.6-113.16 48.77-48.23 113.51-76.01 64.74-27.78 138.36-27.78 73.69 0 138.61 28.06 64.92 28.07 112.94 76.18 48.03 48.11 76.01 112.97 27.99 64.87 27.99 138.62 0 73.53-27.82 138.25-27.83 64.73-76.1 113.47-48.27 48.73-113.18 76.51-64.92 27.78-138.73 27.78ZM480-480Zm.48 307.96q127.55 0 217.52-90.44 89.96-90.44 89.96-218 0-127.55-89.96-217.52-89.97-89.96-217.52-89.96-127.56 0-218 89.96-90.44 89.97-90.44 217.52 0 127.56 90.44 218t218 90.44Z" />
-                </svg>
-                <span>30 min</span>
-            </div>
-            <div class="flex items-center space-x-2 text-sm text-gray-500">
-                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor">
-                    <path d="M420.16-349.73h47.96v-106.39H574.5v-47.96H468.12v-106.38h-47.96v106.38H313.77v47.96h106.39v106.39ZM243.27-219.27q-24.64 0-42.45-17.92Q183-255.1 183-279.46v-401.08q0-25.06 17.82-42.62 17.81-17.57 42.45-17.57h401q25.06 0 42.63 17.57 17.56 17.56 17.56 42.7v171.88l120.73-120.73v298.62L704.46-451.42v171.88q0 24.44-17.56 42.35-17.57 17.92-42.63 17.92h-401Zm0-47.96h400.92q5.19 0 8.75-3.46 3.56-3.46 3.56-8.85v-400.92q0-5.39-3.56-8.85t-8.75-3.46H243.27q-5.38 0-8.85 3.46-3.46 3.46-3.46 8.85v400.92q0 5.39 3.46 8.85 3.47 3.46 8.85 3.46Zm-12.31 0v-425.54 425.54Z"/>
-                </svg>
-                <span>Google Meet</span>
+        <div class="bg-blue-600 p-12 rounded-t-xl text-white">
+            <h2 class="text-4xl font-bold text-center mb-4">Register Now</h2>
+            <div class="flex flex-col items-center justify-center text-center mb-0">
+                <span id="webinar-date" class="text-lg font-semibold text-blue-200">Loading...</span>
+                <span id="webinar-time" class="text-base font-medium text-blue-200"></span>
             </div>
         </div>
 
-        <!-- Form -->
-        <form id="myForm" action="#" method="post" class="space-y-4">
-
-            <!-- Name Fields -->
-            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-4">
-                <div class="flex-1">
-                    <label for="first-name" class="block text-sm font-medium text-gray-700">First Name <span class="text-red-500">*</span></label>
-                    <input type="text" name="First Name" id="first-name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+        <!-- Main Form Content -->
+        <div class="p-12">
+            <!-- Details Section -->
+            <div class="space-y-4 mb-8">
+                <div class="flex items-center space-x-4 text-base text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+                        <path d="m620.12-320.15 34.73-34.73-150.47-150.65v-212.05h-47.96v232.93l163.7 164.5ZM480.09-124.08q-73.53 0-138.25-27.82-64.73-27.83-113.47-76.6-48.73-48.77-76.51-113.51-27.78-64.74-27.78-138.36 0-73.69 27.82-138.6 27.83-64.92 76.6-113.16 48.77-48.23 113.51-76.01 64.74-27.78 138.36-27.78 73.69 0 138.61 28.06 64.92 28.07 112.94 76.18 48.03 48.11 76.01 112.97 27.99 64.87 27.99 138.62 0 73.53-27.82 138.25-27.83 64.73-76.1 113.47-48.27 48.73-113.18 76.51-64.92 27.78-138.73 27.78ZM480-480Zm.48 307.96q127.55 0 217.52-90.44 89.96-90.44 89.96-218 0-127.55-89.96-217.52-89.97-89.96-217.52-89.96-127.56 0-218 89.96-90.44 89.97-90.44 217.52 0 127.56 90.44 218t218 90.44Z" />
+                    </svg>
+                    <span>30 min</span>
                 </div>
-                <div class="flex-1">
-                    <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name</label>
-                    <input type="text" name="Last Name" id="last-name" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                <div class="flex items-center space-x-4 text-base text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+                        <path d="M420.16-349.73h47.96v-106.39H574.5v-47.96H468.12v-106.38h-47.96v106.38H313.77v47.96h106.39v106.39ZM243.27-219.27q-24.64 0-42.45-17.92Q183-255.1 183-279.46v-401.08q0-25.06 17.82-42.62 17.81-17.57 42.45-17.57h401q25.06 0 42.63 17.57 17.56 17.56 17.56 42.7v171.88l120.73-120.73v298.62L704.46-451.42v171.88q0 24.44-17.56 42.35-17.57 17.92-42.63 17.92h-401Zm0-47.96h400.92q5.19 0 8.75-3.46 3.56-3.46 3.56-8.85v-400.92q0-5.39-3.56-8.85t-8.75-3.46H243.27q-5.38 0-8.85 3.46-3.46 3.46-3.46 8.85v400.92q0 5.39 3.46 8.85 3.47 3.46 8.85 3.46Zm-12.31 0v-425.54 425.54Z"/>
+                    </svg>
+                    <span>Google Meet</span>
                 </div>
             </div>
-
-            <!-- Email Field -->
-            <div>
-                <label for="email" class="block text-sm font-medium text-gray-700">Email <span class="text-red-500">*</span></label>
-                <input type="email" name="Email" id="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
-                <p id="emailError" class="mt-2 text-sm text-red-600 hidden">Please enter a valid email address.</p>
-            </div>
-
-            <!-- Submit Button -->
-            <div>
-                <button type="submit" id="submitButton" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                    Register
-                </button>
-            </div>
-
-            <!-- Message Area -->
-            <div id="message" class="hidden text-sm p-3 rounded-md"></div>
-        </form>
-
-        <!-- About Host Section -->
-        <div class="mt-2 pt-2 border-t border-gray-200">
-            <p class="text-center text-xs font-medium text-gray-400 mb-1">Host</p>
-            <div class="flex items-start space-x-4">
-                <img src="https://res.cloudinary.com/dpm4pcaop/image/upload/v1757110764/Group_423_wwnykh.png" alt="Ronnie Lavi profile picture" class="w-24 h-24 rounded-full border border-gray-800 flex-shrink-0">
-                <div class="flex flex-col">
-                    <p class="text-lg font-semibold text-gray-800">Ronnie Lavi</p>
-                    <p class="text-sm text-gray-500 mt-1">Ronnie is a senior product manager with over a decade of experience in the tech industry. He specializes in building and launching innovative software products that solve real-world problems.</p>
+    
+            <!-- Form -->
+            <form id="myForm" action="#" method="post" class="space-y-8">
+    
+                <!-- Name Fields -->
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8 mb-4">
+                    <div class="flex-1">
+                        <label for="first-name" class="block text-lg font-medium text-gray-700">First Name <span class="text-red-500">*</span></label>
+                        <input type="text" name="First Name" id="first-name" required class="mt-2 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-lg">
+                    </div>
+                    <div class="flex-1">
+                        <label for="last-name" class="block text-lg font-medium text-gray-700">Last Name</label>
+                        <input type="text" name="Last Name" id="last-name" class="mt-2 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-lg">
+                    </div>
+                </div>
+    
+                <!-- Email Field -->
+                <div>
+                    <label for="email" class="block text-lg font-medium text-gray-700">Email <span class="text-red-500">*</span></label>
+                    <input type="email" name="Email" id="email" required class="mt-2 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-lg">
+                    <p id="emailError" class="mt-2 text-base text-red-600 hidden">Please enter a valid email address.</p>
+                </div>
+    
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit" id="submitButton" class="w-full flex justify-center py-3 px-6 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        Register
+                    </button>
+                </div>
+    
+                <!-- Message Area -->
+                <div id="message" class="hidden text-base p-4 rounded-md"></div>
+            </form>
+    
+            <!-- About Host Section -->
+            <div class="mt-8 pt-8 border-t border-gray-200">
+                <p class="text-center text-sm font-medium text-gray-400 mb-4">Host</p>
+                <div class="flex items-start space-x-6">
+                    <!-- Image and Fallback Container -->
+                    <div class="relative w-32 h-32 flex-shrink-0">
+                        <img id="host-image" src="https://res.cloudinary.com/dpm4pcaop/image/upload/v1757110764/Group_423_wwnykh.png" alt="Ronnie Lavi profile picture" class="w-full h-full rounded-full border-2 border-gray-800 object-cover" onerror="showFallbackInitials()">
+                        <div id="host-initials-fallback" class="hidden absolute top-0 left-0 w-full h-full rounded-full flex items-center justify-center bg-blue-500 text-white text-4xl font-bold border-2 border-gray-800">
+                            RL
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="text-xl font-semibold text-gray-800">Ronnie Lavi</p>
+                        <p class="text-base text-gray-500 mt-2">Ronnie is a senior product manager with over a decade of experience in the tech industry. He specializes in building and launching innovative software products that solve real-world problems.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -93,7 +104,7 @@
             const emailError = document.getElementById('emailError');
 
             // Replace this with your deployed Google Apps Script URL.
-            const scriptUrl = "https://script.google.com/macros/s/AKfycbzKiChDFHq2gXKOCJpkU6ssnAH4xmucUvr3c5efs52Trile0jveNaUfuv2cm-lrv-fshg/exec";
+            const scriptUrl = "https://script.google.com/macros/s/AKfycbx0QJKIycktqeO7Cmz1CAATz89DPv1jWKWwCYh1LFWaF6JmAMn7upNjx_dj2KOYB5etqg/exec";
 
             // Function to fetch the dynamic webinar date and time
             const fetchWebinarInfo = async () => {
@@ -114,6 +125,14 @@
             };
             
             fetchWebinarInfo();
+
+            // Function to show fallback initials if image fails to load
+            window.showFallbackInitials = function() {
+                const hostImage = document.getElementById('host-image');
+                const hostInitials = document.getElementById('host-initials-fallback');
+                hostImage.classList.add('hidden');
+                hostInitials.classList.remove('hidden');
+            };
 
             form.addEventListener('submit', function(event) {
                 event.preventDefault(); // Prevent the default form submission
@@ -168,4 +187,3 @@
     </script>
 </body>
 </html>
-
