@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <style>
+        :root {
+            --amazing-card-bg: #FFFFFF;
+            --amazing-card-border: #E0E0E0;
+            --text-color: #333333;
+            --light-text-color: #777777;
+            --star-color: #FFC107;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            width: 100%;
+            padding: 0;
+        }
+
+        .testimonial-card {
+            background-color: var(--amazing-card-bg);
+            border: 1px solid var(--amazing-card-border);
+            border-radius: 8px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: var(--star-color);
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-text {
+            font-size: 16px;
+            color: var(--light-text-color);
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .author-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-top: auto;
+        }
+
+        /* Mobile adjustments for a single column layout */
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <h2 class="testimonial-title">Amazing!</h2>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">
+                In 30 minutes, I've learned more than in the past 6 months. Ronnie is great at breaking things down and making things very clear.
+            </p>
+            <span class="author-name">Alex Martinez</span>
+        </div>
+
+        <div class="testimonial-card">
+            <h2 class="testimonial-title">Highly recommended.</h2>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">
+                I was feeling stuck and overwhelmed by VC pitching, but Ronnie totally made it click for me. I feel so much more confident and ready to go!
+            </p>
+            <span class="author-name">Sophia B.</span>
+        </div>
+
+        <div class="testimonial-card">
+            <h2 class="testimonial-title">100% worth it.</h2>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">
+                I was kind of skeptical at first, but decided to give it a shot. I'm so glad I went for it. This was a total game-changer. I have a clear vision and a plan for my next steps now.
+            </p>
+            <span class="author-name">Ethan</span>
+        </div>
+
+        <div class="testimonial-card">
+            <h2 class="testimonial-title">I loved it</h2>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">
+                This session was so packed with real-world examples, tips, and advice. It's not just theory—this is the kind of practical content you can actually use. Very helpful.
+            </p>
+            <span class="author-name">Bhavna Joshi</span>
+        </div>
+    </div>
+</body>
+</html>
