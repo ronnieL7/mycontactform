@@ -11,7 +11,7 @@
         }
     </style>
 </head>
-<body class="bg-white flex items-center justify-center min-h-screen p-4 sm:p-8">
+<body class="bg-white flex items-center justify-center min-h-screen p-2 sm:p-4">
 
     <div class="w-full max-w-3xl bg-white border border-gray-200 rounded-xl shadow-lg">
         
@@ -64,6 +64,9 @@
                     <input type="email" name="Email" id="email" required class="mt-2 block w-full px-4 py-2 md:py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-base md:text-lg">
                     <p id="emailError" class="mt-2 text-sm md:text-base text-red-600 hidden">Please enter a valid email address.</p>
                 </div>
+
+                <!-- Hidden form value -->
+                <input type="hidden" name="Form" value="Form: Mobile">
             
                 <!-- Submit Button -->
                 <div>
@@ -113,9 +116,9 @@
             // Function to show fallback initials if image fails to load
             window.showFallbackInitialls = function() {
                 const hostImage = document.getElementById('host-image');
-                const hostInitials = document.getElementById('host-initials-fallback');
+                const hostInitialls = document.getElementById('host-initials-fallback');
                 hostImage.classList.add('hidden');
-                hostInitials.classList.remove('hidden');
+                hostInitialls.classList.remove('hidden');
             };
 
             form.addEventListener('submit', function(event) {
