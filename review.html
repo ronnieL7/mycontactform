@@ -17,9 +17,10 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #FFFFFF;
+            background-color: #F8F9FA;
             margin: 0;
-            padding: 20px;
+            /* Removed vertical padding from body */
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -30,17 +31,16 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-            /* Adjusted max-width for a smaller overall grid */
             max-width: 600px;
             width: 100%;
-            padding: 0;
+            /* Added horizontal padding here to keep grid from touching screen edges */
+            padding: 0 20px;
         }
 
         .testimonial-card {
             background-color: var(--amazing-card-bg);
             border: 1px solid var(--amazing-card-border);
             border-radius: 8px;
-            /* Reduced padding for smaller card size */
             padding: 15px;
             display: flex;
             flex-direction: column;
@@ -49,27 +49,27 @@
         }
 
         .testimonial-title {
-            font-size: 18px; /* Reduced font size */
+            font-size: 18px;
             font-weight: 700;
             color: var(--text-color);
-            margin-bottom: 5px; /* Reduced margin */
+            margin-bottom: 5px;
         }
 
         .stars {
             color: var(--star-color);
-            font-size: 18px; /* Reduced font size */
-            margin-bottom: 10px; /* Reduced margin */
+            font-size: 18px;
+            margin-bottom: 10px;
         }
 
         .testimonial-text {
-            font-size: 12px; /* Reduced font size */
+            font-size: 12px;
             color: var(--light-text-color);
             line-height: 1.5;
-            margin-bottom: 10px; /* Reduced margin */
+            margin-bottom: 10px;
         }
 
         .author-name {
-            font-size: 12px; /* Reduced font size */
+            font-size: 12px;
             font-weight: 600;
             color: var(--text-color);
             margin-top: auto;
@@ -79,6 +79,8 @@
         @media (max-width: 768px) {
             .testimonials-grid {
                 grid-template-columns: 1fr;
+                /* Adjust padding for smaller screens if needed */
+                padding: 0 10px; /* Slightly less horizontal padding on mobile */
             }
         }
     </style>
@@ -123,4 +125,3 @@
     </div>
 </body>
 </html>
-
