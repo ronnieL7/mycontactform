@@ -1,82 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testimonials</title>
-    <!-- Tailwind CSS CDN for modern styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Custom styles for the stars */
-        .stars {
-            color: #FFC107;
-        }
-        /*
-          The main container should fill its parent and have a white background.
-          This prevents any grey color from the embedding page from showing.
-        */
-        .testimonials-wrapper {
-            @apply flex justify-center items-center min-h-screen bg-white p-4;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Testimonials</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    /* Custom styles for the stars */
+    .stars {
+      color: #FFC107;
+    }
+  </style>
 </head>
-<body>
-    <!-- 
-      This is the new wrapper div. It ensures a white background 
-      even when the content is embedded in a different page. 
-    -->
-    <div class="testimonials-wrapper">
-        <!-- 
-            Updated grid to always be 2 columns. The cards will now shrink 
-            and grow to fit the screen size, maintaining the 2x2 layout.
-        -->
-        <div class="grid grid-cols-2 gap-5 max-w-2xl w-full">
-            <!-- Testimonial Card 1 -->
-            <div class="bg-white border border-gray-200 rounded-lg p-6 flex flex-col text-center shadow-md">
-                <h2 class="text-lg font-bold text-gray-800 mb-1">Amazing!</h2>
-                <div class="stars text-xl mb-2">★★★★★</div>
-                <p class="text-xs text-gray-500 leading-snug mb-3">
-                    In 30 minutes, I've learned more than in the past 6 months. Ronnie is great at breaking things down and making things very clear.
-                </p>
-                <span class="text-xs font-semibold text-gray-800 mt-auto">Alex Martinez</span>
-            </div>
+<body class="bg-white">
+  <!-- Wrapper -->
+  <div class="flex justify-center items-center min-h-screen bg-white p-4">
+    <!-- Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl w-full">
+      
+      <!-- Testimonial Card 1 -->
+      <div class="bg-white border border-gray-200 rounded-lg p-6 flex flex-col text-center shadow-md">
+        <h2 class="text-lg font-bold text-gray-800 mb-1">Amazing!</h2>
+        <div class="stars text-xl mb-2">★★★★★</div>
+        <p class="text-xs text-gray-500 leading-snug mb-3">
+          In 30 minutes, I've learned more than in the past 6 months. Ronnie is great at breaking things down and making things very clear.
+        </p>
+        <span class="text-xs font-semibold text-gray-800 mt-auto">Alex Martinez</span>
+      </div>
 
-            <!-- Testimonial Card 2 -->
-            <div class="bg-white border border-gray-200 rounded-lg p-6 flex flex-col text-center shadow-md">
-                <h2 class="text-lg font-bold text-gray-800 mb-1">Highly recommended.</h2>
-                <div class="stars text-xl mb-2">★★★★★</div>
-                <p class="text-xs text-gray-500 leading-snug mb-3">
-                    I was feeling stuck and overwhelmed by VC pitching, but Ronnie totally made it click for me. I feel so much more confident and ready to go!
-                </p>
-                <span class="text-xs font-semibold text-gray-800 mt-auto">Sophia B.</span>
-            </div>
+      <!-- Testimonial Card 2 -->
+      <div class="bg-white border border-gray-200 rounded-lg p-6 flex flex-col text-center shadow-md">
+        <h2 class="text-lg font-bold text-gray-800 mb-1">Highly recommended.</h2>
+        <div class="stars text-xl mb-2">★★★★★</div>
+        <p class="text-xs text-gray-500 leading-snug mb-3">
+          I was feeling stuck and overwhelmed by VC pitching, but Ronnie totally made it click for me. I feel so much more confident and ready to go!
+        </p>
+        <span class="text-xs font-semibold text-gray-800 mt-auto">Sophia B.</span>
+      </div>
 
-            <!-- Testimonial Card 3 -->
-            <div class="bg-white border border-gray-200 rounded-lg p-6 flex flex-col text-center shadow-md">
-                <h2 class="text-lg font-bold text-gray-800 mb-1">100% worth it.</h2>
-                <div class="stars text-xl mb-2">★★★★★</div>
-                <p class="text-xs text-gray-500 leading-snug mb-3">
-                    I was kind of skeptical at first, but decided to give it a shot. I'm so glad I went for it. This was a total game-changer. I have a clear vision and a plan for my next steps now.
-                </p>
-                <span class="text-xs font-semibold text-gray-800 mt-auto">Ethan</span>
-            </div>
+      <!-- Testimonial Card 3 -->
+      <div class="bg-white border border-gray-200 rounded-lg p-6 flex flex-col text-center shadow-md">
+        <h2 class="text-lg font-bold text-gray-800 mb-1">100% worth it.</h2>
+        <div class="stars text-xl mb-2">★★★★★</div>
+        <p class="text-xs text-gray-500 leading-snug mb-3">
+          I was kind of skeptical at first, but decided to give it a shot. I'm so glad I went for it. This was a total game-changer. I have a clear vision and a plan for my next steps now.
+        </p>
+        <span class="text-xs font-semibold text-gray-800 mt-auto">Ethan</span>
+      </div>
 
-            <!-- Testimonial Card 4 -->
-            <div class="bg-white border border-gray-200 rounded-lg p-6 flex flex-col text-center shadow-md">
-                <h2 class="text-lg font-bold text-gray-800 mb-1">I loved it</h2>
-                <div class="stars text-xl mb-2">★★★★★</div>
-                <p class="text-xs text-gray-500 leading-snug mb-3">
-                    This session was so packed with real-world examples, tips, and advice. It's not just theory—this is the kind of practical content you can actually use. Very helpful.
-                </p>
-                <span class="text-xs font-semibold text-gray-800 mt-auto">Bhavna Joshi</span>
-            </div>
-        </div>
+      <!-- Testimonial Card 4 -->
+      <div class="bg-white border border-gray-200 rounded-lg p-6 flex flex-col text-center shadow-md">
+        <h2 class="text-lg font-bold text-gray-800 mb-1">I loved it</h2>
+        <div class="stars text-xl mb-2">★★★★★</div>
+        <p class="text-xs text-gray-500 leading-snug mb-3">
+          This session was so packed with real-world examples, tips, and advice. It's not just theory—this is the kind of practical content you can actually use. Very helpful.
+        </p>
+        <span class="text-xs font-semibold text-gray-800 mt-auto">Bhavna Joshi</span>
+      </div>
+
     </div>
+  </div>
 </body>
 </html>
-
