@@ -27,7 +27,7 @@
         <!-- Main Form Content -->
         <div class="px-6 pt-6 pb-8 md:px-10 md:pb-10">
             <!-- Details Section -->
-            <div class="text-sm text-blue-600 mb-2">Online Event</div>
+            <div class="text-sm text-blue-600 mb-2">Online Event!</div>
             <div class="space-y-2 mb-6">
                 <div class="flex items-center space-x-4 text-sm md:text-base text-gray-500">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
@@ -65,9 +65,12 @@
                     <p id="emailError" class="mt-2 text-sm md:text-base text-red-600 hidden">Please enter a valid email address.</p>
                 </div>
             
+                <!-- Hidden form value -->
+                <input type="hidden" name="Form" value="Form: Desktop">
+
                 <!-- Submit Button -->
                 <div>
-                    <button type="submit" id="submitButton" class="w-full flex justify-center py-3 px-6 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    <button type="submit" id="submitButton" name="Submit" class="w-full flex justify-center py-3 px-6 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                         Register
                     </button>
                 </div>
@@ -96,7 +99,7 @@
         </div>
     </div>
 
-    <script>
+    <script defer>
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('myForm');
             const submitButton = document.getElementById('submitButton');
@@ -105,7 +108,7 @@
             const emailError = document.getElementById('emailError');
 
             // Replace this with your deployed Google Apps Script URL.
-            const scriptUrl = "https://ronniel7.github.io/mycontactform/webinar_info.json";
+            const scriptUrl = "https://script.google.com/macros/s/AKfycbxKxsx6mV3kMO61xtDmdAukPcxdXRUtotUi5PatsS3OmdEl4-g_UMUr47QV99sCyt4/exec";
 
             // Function to fetch the dynamic webinar date and time
             const fetchWebinarInfo = async () => {
@@ -128,11 +131,11 @@
             fetchWebinarInfo();
 
             // Function to show fallback initials if image fails to load
-            window.showFallbackInitials = function() {
+            window.showFallbackInitialls = function() {
                 const hostImage = document.getElementById('host-image');
-                const hostInitials = document.getElementById('host-initials-fallback');
+                const hostInitialls = document.getElementById('host-initials-fallback');
                 hostImage.classList.add('hidden');
-                hostInitials.classList.remove('hidden');
+                hostInitialls.classList.remove('hidden');
             };
 
             form.addEventListener('submit', function(event) {
@@ -188,6 +191,3 @@
     </script>
 </body>
 </html>
-
-
-
