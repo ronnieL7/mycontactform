@@ -3,6 +3,6 @@
   "date": "Thursday, October 16, 2025",
   "time": "11.30pm EST | 8.30am PST | 5.30pm CST",
   "_explanation2": "The 'standardDateTime' field is used by the script for the calendar invite.",
-  "standardDateTime": "2025-10-01T12:00:00-04:00",
+  "standardDateTime": "2025-10-16T11:30:00-04:00",
   "meetLink": "meet.google.com/kpo-skba-qff"
 }
