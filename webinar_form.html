@@ -40,7 +40,7 @@
                 </div>
             </div>
             
-            <form id="myForm" action="#" method="post" class="space-y-4 md:space-y-6">
+            <form id="myForm" class="space-y-4 md:space-y-6">
             
                 <div class="flex flex-row space-x-4">
                     <div class="flex-1">
@@ -74,7 +74,7 @@
                 <p class="text-center text-xs md:text-sm font-medium text-gray-400 mb-3">Host</p>
                 <div class="flex items-start space-x-4 md:space-x-6">
                     <div class="relative w-20 h-20 md:w-28 md:h-28 flex-shrink-0">
-                        <img id="host-image" src="https://res.cloudinary.com/dpm4pcaop/image/upload/v1757110764/Group_423_wwnykh.png" alt="Ronnie Lavi profile picture" class="w-full h-full rounded-full border-2 border-gray-800 object-cover" onerror="showFallbackInitialls()">
+                        <img id="host-image" src="https://res.cloudinary.com/dpm4pcaop/image/upload/v1757110764/Group_423_wwnykh.png" alt="Ronnie Lavi profile picture" class="w-full h-full rounded-full border-2 border-gray-800 object-cover" onerror="showFallbackInitials()">
                         <div id="host-initials-fallback" class="hidden absolute top-0 left-0 w-full h-full rounded-full flex items-center justify-center bg-blue-500 text-white text-2xl md:text-3xl font-bold border-2 border-gray-800">
                             RL
                         </div>
@@ -96,7 +96,7 @@
             const emailInput = document.getElementById('email');
             const emailError = document.getElementById('emailError');
 
-            // IMPORTANT: The scriptUrl is defined here. Make sure this URL is correct.
+            // 🛑 CRITICAL: REPLACE THIS URL with your new, final, authorized deployment URL 🛑
             const scriptUrl = "https://script.google.com/macros/s/AKfycbyfWd_MsdTbZxR4KHa11bt8wru7THIUDZWdfvipRhsMheEb0Ld0roPv962_FGl2pddW/exec";
 
             // Function to fetch the dynamic webinar date and time
@@ -119,12 +119,12 @@
             
             fetchWebinarInfo();
 
-            // Function to show fallback initials if image fails to load (corrected function name)
-            window.showFallbackInitialls = function() {
+            // Corrected function name
+            window.showFallbackInitials = function() {
                 const hostImage = document.getElementById('host-image');
-                const hostInitialls = document.getElementById('host-initials-fallback');
+                const hostInitials = document.getElementById('host-initials-fallback');
                 hostImage.classList.add('hidden');
-                hostInitialls.classList.remove('hidden');
+                hostInitials.classList.remove('hidden');
             };
 
             form.addEventListener('submit', function(event) {
@@ -180,4 +180,3 @@
     </script>
 </body>
 </html>
-
