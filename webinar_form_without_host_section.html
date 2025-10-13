@@ -1,170 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
 <body class="bg-white flex items-center justify-center min-h-screen p-2 sm:p-4">
 
-    <div class="w-full max-w-3xl bg-white border border-gray-200 rounded-xl shadow-lg">
-        
-        <!-- Header -->
-        <div class="bg-blue-600 py-6 px-6 md:py-8 md:px-10 rounded-t-xl text-white">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Register Now</h2>
-            <div class="flex flex-col items-center justify-center text-center mb-0">
-                <span id="webinar-date" class="text-lg md:text-xl font-semibold text-yellow-300">Loading...</span>
-                <span id="webinar-time" class="text-sm md:text-base font-medium text-yellow-300"></span>
-            </div>
-        </div>
+    <div class="w-full max-w-3xl bg-white border border-gray-200 rounded-xl shadow-lg">
+        
+                <div class="bg-blue-600 py-6 px-6 md:py-8 md:px-10 rounded-t-xl text-white">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Register Now</h2>
+            <div class="flex flex-col items-center justify-center text-center mb-0">
+                <span id="webinar-date" class="text-lg md:text-xl font-semibold text-yellow-300">Loading...</span>
+                <span id="webinar-time" class="text-sm md:text-base font-medium text-yellow-300"></span>
+            </div>
+        </div>
 
-        <!-- Main Form Content -->
-        <div class="px-6 pt-6 pb-8 md:px-10 md:pb-10">
-            <!-- Details Section -->
-            <div class="text-sm text-blue-600 mb-2">Online Event</div>
-            <div class="space-y-2 mb-6">
-                <div class="flex items-center space-x-4 text-sm md:text-base text-gray-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
-                        <path d="m620.12-320.15 34.73-34.73-150.47-150.65v-212.05h-47.96v232.93l163.7 164.5ZM480.09-124.08q-73.53 0-138.25-27.82-64.73-27.83-113.47-76.6-48.73-48.77-76.51-113.51-27.78-64.74-27.78-138.36 0-73.69 27.82-138.6 27.83-64.92 76.6-113.16 48.77-48.23 113.51-76.01 64.74-27.78 138.36-27.78 73.69 0 138.61 28.06 64.92 28.07 112.94 76.18 48.03 48.11 76.01 112.97 27.99 64.87 27.99 138.62 0 73.53-27.82 138.25-27.83 64.73-76.1 113.47-48.27 48.73-113.18 76.51-64.92 27.78-138.73 27.78ZM480-480Zm.48 307.96q127.55 0 217.52-90.44 89.96-90.44 89.96-218 0-127.55-89.96-217.52-89.97-89.96-217.52-89.96-127.56 0-218 89.96-90.44 89.97-90.44 217.52 0 127.56 90.44 218t218 90.44Z" />
-                    </svg>
-                    <span>30 min</span>
-                </div>
-                <div class="flex items-center space-x-4 text-sm md:text-base text-gray-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
-                        <path d="M420.16-349.73h47.96v-106.39H574.5v-47.96H468.12v-106.38h-47.96v106.38H313.77v47.96h106.39v106.39ZM243.27-219.27q-24.64 0-42.45-17.92Q183-255.1 183-279.46v-401.08q0-25.06 17.82-42.62 17.81-17.57 42.45-17.57h401q25.06 0 42.63 17.57 17.56 17.56 17.56 42.7v171.88l120.73-120.73v298.62L704.46-451.42v171.88q0 24.44-17.56 42.35-17.57 17.92-42.63 17.92h-401Zm0-47.96h400.92q5.19 0 8.75-3.46 3.56-3.46 3.56-8.85v-400.92q0-5.39-3.56-8.85t-8.75-3.46H243.27q-5.38 0-8.85 3.46-3.46 3.46-3.46 8.85v400.92q0 5.39 3.46 8.85 3.47 3.46 8.85 3.46Zm-12.31 0v-425.54 425.54Z"/>
-                    </svg>
-                    <span>Google Meet</span>
-                </div>
-            </div>
-            
-            <!-- Form -->
-            <form id="myForm" action="https://script.google.com/macros/s/AKfycbyfWd_MsdTbZxR4KHa11bt8wru7THIUDZWdfvipRhsMheEb0Ld0roPv962_FGl2pddW/exec" method="post" class="space-y-6 md:space-y-8">
-            
-                <!-- Name Fields -->
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8 mb-4">
-                    <div class="flex-1">
-                        <label for="first-name" class="block text-base md:text-lg font-medium text-gray-700">First Name <span class="text-red-500">*</span></label>
-                        <input type="text" name="First Name" id="first-name" required class="mt-2 block w-full px-4 py-2 md:py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-base md:text-lg">
-                    </div>
-                    <div class="flex-1">
-                        <label for="last-name" class="block text-base md:text-lg font-medium text-gray-700">Last Name</label>
-                        <input type="text" name="Last Name" id="last-name" class="mt-2 block w-full px-4 py-2 md:py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-base md:text-lg">
-                    </div>
-                </div>
-            
-                <!-- Email Field -->
-                <div>
-                    <label for="email" class="block text-base md:text-lg font-medium text-gray-700">Email <span class="text-red-500">*</span></label>
-                    <input type="email" name="Email" id="email" required class="mt-2 block w-full px-4 py-2 md:py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-base md:text-lg">
-                    <p id="emailError" class="mt-2 text-sm md:text-base text-red-600 hidden">Please enter a valid email address.</p>
-                </div>
+                <div class="px-6 pt-6 pb-8 md:px-10 md:pb-10">
+                        <div class="text-sm text-blue-600 mb-2">Online Event</div>
+            <div class="space-y-2 mb-6">
+                <div class="flex items-center space-x-4 text-sm md:text-base text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+                        <path d="m620.12-320.15 34.73-34.73-150.47-150.65v-212.05h-47.96v232.93l163.7 164.5ZM480.09-124.08q-73.53 0-138.25-27.82-64.73-27.83-113.47-76.6-48.73-48.77-76.51-113.51-27.78-64.74-27.78-138.36 0-73.69 27.82-138.6 27.83-64.92 76.6-113.16 48.77-48.23 113.51-76.01 64.74-27.78 138.36-27.78 73.69 0 138.61 28.06 64.92 28.07 112.94 76.18 48.03 48.11 76.01 112.97 27.99 64.87 27.99 138.62 0 73.53-27.82 138.25-27.83 64.73-76.1 113.47-48.27 48.73-113.18 76.51-64.92 27.78-138.73 27.78ZM480-480Zm.48 307.96q127.55 0 217.52-90.44 89.96-90.44 89.96-218 0-127.55-89.96-217.52-89.97-89.96-217.52-89.96-127.56 0-218 89.96-90.44 89.97-90.44 217.52 0 127.56 90.44 218t218 90.44Z" />
+                    </svg>
+                    <span>30 min</span>
+                </div>
+                <div class="flex items-center space-x-4 text-sm md:text-base text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+                        <path d="M420.16-349.73h47.96v-106.39H574.5v-47.96H468.12v-106.38h-47.96v106.38H313.77v47.96h106.39v106.39ZM243.27-219.27q-24.64 0-42.45-17.92Q183-255.1 183-279.46v-401.08q0-25.06 17.82-42.62 17.81-17.57 42.45-17.57h401q25.06 0 42.63 17.57 17.56 17.56 17.56 42.7v171.88l120.73-120.73v298.62L704.46-451.42v171.88q0 24.44-17.56 42.35-17.57 17.92-42.63 17.92h-401Zm0-47.96h400.92q5.19 0 8.75-3.46 3.56-3.46 3.56-8.85v-400.92q0-5.39-3.56-8.85t-8.75-3.46H243.27q-5.38 0-8.85 3.46-3.46 3.46-3.46 8.85v400.92q0 5.39 3.46 8.85 3.47 3.46 8.85 3.46Zm-12.31 0v-425.54 425.54Z"/>
+                    </svg>
+                    <span>Google Meet</span>
+                </div>
+            </div>
+            
+                                    <form id="myForm" class="space-y-6 md:space-y-8">
+            
+                                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8 mb-4">
+                    <div class="flex-1">
+                        <label for="first-name" class="block text-base md:text-lg font-medium text-gray-700">First Name <span class="text-red-500">*</span></label>
+                        <input type="text" name="First Name" id="first-name" required class="mt-2 block w-full px-4 py-2 md:py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-base md:text-lg">
+                    </div>
+                    <div class="flex-1">
+                        <label for="last-name" class="block text-base md:text-lg font-medium text-gray-700">Last Name</label>
+                        <input type="text" name="Last Name" id="last-name" class="mt-2 block w-full px-4 py-2 md:py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-base md:text-lg">
+                    </div>
+                </div>
+            
+                                <div>
+                    <label for="email" class="block text-base md:text-lg font-medium text-gray-700">Email <span class="text-red-500">*</span></label>
+                    <input type="email" name="Email" id="email" required class="mt-2 block w-full px-4 py-2 md:py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-base md:text-lg">
+                    <p id="emailError" class="mt-2 text-sm md:text-base text-red-600 hidden">Please enter a valid email address.</p>
+                </div>
 
-                <!-- Hidden form value -->
-                <input type="hidden" name="Form" value="Form: Mobile">
-            
-                <!-- Submit Button -->
-                <div>
-                    <button type="submit" id="submitButton" name="Submit" class="w-full flex justify-center py-3 px-6 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                        Register
-                    </button>
-                </div>
-            
-                <!-- Message Area -->
-                <div id="message" class="hidden text-sm md:text-base p-4 rounded-md"></div>
-            </form>
-            
-        </div>
-    </div>
+                                <input type="hidden" name="Form" value="Form: Mobile">
+            
+                                <div>
+                    <button type="submit" id="submitButton" name="Submit" class="w-full flex justify-center py-3 px-6 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        Register
+                    </button>
+                </div>
+            
+                                <div id="message" class="hidden text-sm md:text-base p-4 rounded-md"></div>
+            </form>
+            
+        </div>
+    </div>
 
-    <script defer>
-        document.addEventListener('DOMContentLoaded', () => {
-            const form = document.getElementById('myForm');
-            const submitButton = document.getElementById('submitButton');
-            const messageDiv = document.getElementById('message');
-            const emailInput = document.getElementById('email');
-            const emailError = document.getElementById('emailError');
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('myForm');
+            const submitButton = document.getElementById('submitButton');
+            const messageDiv = document.getElementById('message');
+            const emailInput = document.getElementById('email');
+            const emailError = document.getElementById('emailError');
 
-            // Replace this with your deployed Google Apps Script URL.
-            const scriptUrl = "https://script.google.com/macros/s/AKfycbxKxsx6mV3kMO61xtDmdAukPcxdXRUtotUi5PatsS3OmdEl4-g_UMUr47QV99sCyt4/exec";
+            // 🛑 REPLACE THIS URL WITH THE NEWEST, AUTHORIZED DEPLOYMENT URL 🛑
+            const scriptUrl = "https://script.google.com/macros/s/AKfycbyfWd_MsdTbZxR4KHa11bt8wru7THIUDZWdfvipRhsMheEb0Ld0roPv962_FGl2pddW/exec";
 
-            // Function to fetch the dynamic webinar date and time
-            const fetchWebinarInfo = async () => {
-                try {
-                    const response = await fetch(scriptUrl);
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    const data = await response.json();
-                    
-                    document.getElementById('webinar-date').textContent = data.date;
-                    document.getElementById('webinar-time').textContent = data.time;
-                } catch (error) {
-                    console.error('Failed to fetch webinar information:', error);
-                    document.getElementById('webinar-date').textContent = 'Date not available';
-                    document.getElementById('webinar-time').textContent = '';
-                }
-            };
-            
-            fetchWebinarInfo();
+            // Function to fetch the dynamic webinar date and time
+            const fetchWebinarInfo = async () => {
+                try {
+                    const response = await fetch(scriptUrl);
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    const data = await response.json();
+                    
+                    document.getElementById('webinar-date').textContent = data.date;
+                    document.getElementById('webinar-time').textContent = data.time;
+                } catch (error) {
+                    console.error('Failed to fetch webinar information:', error);
+                    document.getElementById('webinar-date').textContent = 'Date not available';
+                    document.getElementById('webinar-time').textContent = '';
+                }
+            };
+            
+            fetchWebinarInfo();
 
-            form.addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevent the default form submission
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
 
-                if (!emailInput.value.includes('@')) {
-                    emailError.classList.remove('hidden');
-                    return;
-                } else {
-                    emailError.classList.add('hidden');
-                }
+                if (!emailInput.value.includes('@')) {
+                    emailError.classList.remove('hidden');
+                    return;
+                } else {
+                    emailError.classList.add('hidden');
+                }
 
-                const formData = new FormData(this);
-                const data = new URLSearchParams(formData).toString();
+                const formData = new FormData(this);
+                const data = new URLSearchParams(formData).toString();
 
-                submitButton.disabled = true;
-                submitButton.classList.add('opacity-50', 'cursor-not-allowed');
+                submitButton.disabled = true;
+                submitButton.classList.add('opacity-50', 'cursor-not-allowed');
 
-                messageDiv.classList.add('hidden');
-                messageDiv.textContent = '';
+                messageDiv.classList.add('hidden');
+                messageDiv.textContent = '';
 
-                fetch(scriptUrl, {
-                    method: 'POST',
-                    body: data,
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded'
-                    }
-                })
-                .then(response => response.text())
-                .then(result => {
-                    submitButton.disabled = false;
-                    submitButton.classList.remove('opacity-50', 'cursor-not-allowed');
+                fetch(scriptUrl, {
+                    method: 'POST',
+                    body: data,
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    }
+                })
+                .then(response => response.text())
+                .then(result => {
+                    submitButton.disabled = false;
+                    submitButton.classList.remove('opacity-50', 'cursor-not-allowed');
 
-                    if (result.trim() === 'Success') {
-                        messageDiv.classList.remove('hidden', 'bg-red-100', 'text-red-700');
-                        messageDiv.classList.add('bg-green-100', 'text-green-700');
-                        messageDiv.innerHTML = 'You\'re all set!<br>Please check your inbox for a calendar invite. See you soon.';
-                    } else {
-                        messageDiv.classList.remove('hidden', 'bg-green-100', 'text-green-700');
-                        messageDiv.classList.add('bg-red-100', 'text-red-700');
-                        messageDiv.textContent = 'Error: ' + result;
-                    }
-                })
-                .catch(error => {
-                    submitButton.disabled = false;
-                    submitButton.classList.remove('opacity-50', 'cursor-not-allowed');
-                    messageDiv.classList.remove('hidden', 'bg-green-100', 'text-green-700');
-                    messageDiv.classList.add('bg-red-100', 'text-red-700');
-                    messageDiv.textContent = 'An error occurred. Please try again.';
-                });
-            });
-        });
-    </script>
+                    if (result.trim() === 'Success') {
+                        messageDiv.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+                        messageDiv.classList.add('bg-green-100', 'text-green-700');
+                        messageDiv.innerHTML = 'You\'re all set!<br>Please check your inbox for a calendar invite. See you soon.';
+                    } else {
+                        messageDiv.classList.remove('hidden', 'bg-green-100', 'text-green-700');
+                        messageDiv.classList.add('bg-red-100', 'text-red-700');
+                        messageDiv.textContent = 'Error: ' + result;
+                    }
+                })
+                .catch(error => {
+                    submitButton.disabled = false;
+                    submitButton.classList.remove('opacity-50', 'cursor-not-allowed');
+                    messageDiv.classList.remove('hidden', 'bg-green-100', 'text-green-700');
+                    messageDiv.classList.add('bg-red-100', 'text-red-700');
+                    messageDiv.textContent = 'An error occurred. Please try again.';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
-
