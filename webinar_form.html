@@ -3,187 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webinar Registration</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+        /* Optional custom styling for a better look */
+        .container {
+            max-width: 480px;
+        }
+        .form-input {
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+        .form-input:focus {
+            border-color: #3b82f6; /* Tailwind blue-500 */
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+            outline: none;
         }
     </style>
 </head>
-<body class="bg-white flex h-auto">
-
-    <div class="w-full bg-white border border-gray-200 rounded-xl shadow-lg">
+<body class="bg-gray-50 flex items-center justify-center min-h-screen p-4">
+    <div class="container bg-white shadow-xl rounded-lg p-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-4 text-center">
+            The Investor Mindset
+        </h1>
         
-        <div class="bg-blue-600 py-5 px-6 md:py-7 md:px-10 rounded-t-xl text-white">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-3">Register Now</h2>
-            <div class="flex flex-col items-center justify-center text-center mb-0">
-                <span id="webinar-date" class="text-lg md:text-xl font-semibold text-yellow-300">Loading...</span>
-                <span id="webinar-time" class="text-sm md:text-base font-medium text-yellow-300"></span>
-            </div>
+        <div id="webinar-details" class="text-center text-gray-600 mb-6">
+            <p id="date-placeholder" class="text-lg font-semibold text-blue-600">Loading Date...</p>
+            <p id="time-placeholder" class="text-md text-gray-700">Loading Time...</p>
         </div>
 
-        <div class="px-6 pt-6 pb-8 md:px-10 md:pb-10">
-            <div class="text-sm text-blue-600 mb-2">Online Event</div>
-            <div class="space-y-2 mb-4">
-                <div class="flex items-center space-x-4 text-sm md:text-base text-gray-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
-                        <path d="m620.12-320.15 34.73-34.73-150.47-150.65v-212.05h-47.96v232.93l163.7 164.5ZM480.09-124.08q-73.53 0-138.25-27.82-64.73-27.83-113.47-76.6-48.73-48.77-76.51-113.51-27.78-64.74-27.78-138.36 0-73.69 27.82-138.6 27.83-64.92 76.6-113.16 48.77-48.23 113.51-76.01 64.74-27.78 138.36-27.78 73.69 0 138.61 28.06 64.92 28.07 112.94 76.18 48.03 48.11 76.01 112.97 27.99 64.87 27.99 138.62 0 73.53-27.82 138.25-27.83 64.73-76.1 113.47-48.27 48.73-113.18 76.51-64.92 27.78-138.73 27.78ZM480-480Zm.48 307.96q127.55 0 217.52-90.44 89.96-90.44 89.96-218 0-127.55-89.96-217.52-89.96-89.97-217.52-89.96-127.56 0-218 89.96-90.44 89.97-90.44 217.52 0 127.56 90.44 218t218 90.44Z" />
-                    </svg>
-                    <span>30 min</span>
-                </div>
-                <div class="flex items-center space-x-4 text-sm md:text-base text-gray-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
-                        <path d="M420.16-349.73h47.96v-106.39H574.5v-47.96H468.12v-106.38h-47.96v106.38H313.77v47.96h106.39v106.39ZM243.27-219.27q-24.64 0-42.45-17.92Q183-255.1 183-279.46v-401.08q0-25.06 17.82-42.62 17.81-17.57 42.45-17.57h401q25.06 0 42.63 17.57 17.56 17.56 17.56 42.7v171.88l120.73-120.73v298.62L704.46-451.42v171.88q0 24.44-17.56 42.35-17.57 17.92-42.63 17.92h-401Zm0-47.96h400.92q5.19 0 8.75-3.46 3.56-3.46 3.56-8.85v-400.92q0-5.39-3.56-8.85t-8.75-3.46H243.27q-5.38 0-8.85 3.46-3.46 3.46-3.46 8.85v400.92q0 5.39 3.46 8.85 3.47 3.46 8.85 3.46Zm-12.31 0v-425.54 425.54Z"/>
-                    </svg>
-                    <span>Google Meet</span>
-                </div>
-            </div>
-            
-            <form id="myForm" action="#" method="post" class="space-y-4 md:space-y-6">
-            
-                <div class="flex flex-row space-x-4">
-                    <div class="flex-1">
-                        <label for="first-name" class="block text-base font-medium text-gray-700">First Name <span class="text-red-500">*</span></label>
-                        <input type="text" name="First Name" id="first-name" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-base md:text-lg">
-                    </div>
-                    <div class="flex-1">
-                        <label for="last-name" class="block text-base font-medium text-gray-700">Last Name</label>
-                        <input type="text" name="Last Name" id="last-name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-base md:text-lg">
-                    </div>
-                </div>
-            
-                <div>
-                    <label for="email" class="block text-base font-medium text-gray-700">Email <span class="text-red-500">*</span></label>
-                    <input type="email" name="Email" id="email" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-base md:text-lg">
-                    <p id="emailError" class="mt-1 text-sm md:text-base text-red-600 hidden">Please enter a valid email address.</p>
-                </div>
-            
-                <input type="hidden" name="Form" value="Form: Desktop">
+        <form id="registration-form" class="space-y-4">
+            <input type="hidden" name="Form" value="Form: Desktop">
 
-                <div>
-                    <button type="submit" id="submitButton" name="Submit" class="w-full flex justify-center py-2 px-6 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                        Register
-                    </button>
-                </div>
-            
-                <div id="message" class="hidden text-sm md:text-base p-4 rounded-md"></div>
-            </form>
-            
-            <div class="mt-4 pt-4 border-t border-gray-200">
-                <p class="text-center text-xs md:text-sm font-medium text-gray-400 mb-3">Host</p>
-                <div class="flex items-start space-x-4 md:space-x-6">
-                    <div class="relative w-20 h-20 md:w-28 md:h-28 flex-shrink-0">
-                        <img id="host-image" src="https://res.cloudinary.com/dpm4pcaop/image/upload/v1757110764/Group_423_wwnykh.png" alt="Ronnie Lavi profile picture" class="w-full h-full rounded-full border-2 border-gray-800 object-cover" onerror="showFallbackInitialls()">
-                        <div id="host-initials-fallback" class="hidden absolute top-0 left-0 w-full h-full rounded-full flex items-center justify-center bg-blue-500 text-white text-2xl md:text-3xl font-bold border-2 border-gray-800">
-                            RL
-                        </div>
-                    </div>
-                    <div class="flex flex-col">
-                        <p class="text-lg md:text-xl font-semibold text-gray-800">Ronnie Lavi</p>
-                        <p class="text-sm text-gray-500 mt-1">For over 2 decades, Ronnie has played a key role in building and scaling category-leading companies. He has gone from startup to IPO to exit twice (totalling over $2B). Ronnie currently invests and works closely with early-stage startups.</p>
-                    </div>
-                </div>
+            <div>
+                <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
+                <input type="text" id="firstName" name="First Name" required
+                       class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm form-input">
             </div>
-        </div>
+
+            <div>
+                <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name</label>
+                <input type="text" id="lastName" name="Last Name" required
+                       class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm form-input">
+            </div>
+
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="email" name="Email" required
+                       class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm form-input">
+            </div>
+
+            <div id="message-div" class="hidden p-3 rounded-lg text-sm font-medium" role="alert">
+                </div>
+
+            <div>
+                <button type="submit" id="submit-button"
+                        class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+                    Register Now
+                </button>
+            </div>
+        </form>
     </div>
 
-    <script defer>
-        document.addEventListener('DOMContentLoaded', () => {
-            const form = document.getElementById('myForm');
-            const submitButton = document.getElementById('submitButton');
-            const messageDiv = document.getElementById('message');
-            const emailInput = document.getElementById('email');
-            const emailError = document.getElementById('emailError');
+    <script>
+        // 🚨 IMPORTANT: Replace this URL with your actual deployed Apps Script Web App URL
+        const APP_SCRIPT_URL = 'YOUR_APP_SCRIPT_WEB_APP_URL_HERE'; 
 
-            // IMPORTANT: The scriptUrl is defined here. Make sure this URL is correct.
-            const scriptUrl = "https://script.google.com/macros/s/AKfycbyfWd_MsdTbZxR4KHa11bt8wru7THIUDZWdfvipRhsMheEb0Ld0roPv962_FGl2pddW/exec";
+        const form = document.getElementById('registration-form');
+        const messageDiv = document.getElementById('message-div');
+        const submitButton = document.getElementById('submit-button');
+        const datePlaceholder = document.getElementById('date-placeholder');
+        const timePlaceholder = document.getElementById('time-placeholder');
 
-            // Function to fetch the dynamic webinar date and time
-            const fetchWebinarInfo = async () => {
-                try {
-                    const response = await fetch(scriptUrl);
-                
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    const data = await response.json();
-                    
-                    document.getElementById('webinar-date').textContent = data.date;
-                    document.getElementById('webinar-time').textContent = data.time;
-                } catch (error) {
-                    console.error('Failed to fetch webinar information:', error);
-                    document.getElementById('webinar-date').textContent = 'Date not available';
-                    document.getElementById('webinar-time').textContent = '';
-                }
-            };
-            
-            fetchWebinarInfo();
-
-            // Function to show fallback initials if image fails to load (corrected function name)
-            window.showFallbackInitialls = function() {
-                const hostImage = document.getElementById('host-image');
-                const hostInitialls = document.getElementById('host-initials-fallback');
-                hostImage.classList.add('hidden');
-                hostInitialls.classList.remove('hidden');
-            };
-
-            form.addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevent the default form submission
-
-                if (!emailInput.value.includes('@')) {
-                    emailError.classList.remove('hidden');
-                    return;
-                } else {
-                    emailError.classList.add('hidden');
-                }
-
-                const formData = new FormData(this);
-                const data = new URLSearchParams(formData).toString();
-
-                submitButton.disabled = true;
-                submitButton.classList.add('opacity-50', 'cursor-not-allowed');
-
-                messageDiv.classList.add('hidden');
-                messageDiv.textContent = '';
-
-                fetch(scriptUrl, {
-                    method: 'POST',
-                    body: data,
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded'
-                    }
-                })
-                .then(response => response.text())
-                .then(result => {
-                    submitButton.disabled = false;
-                    submitButton.classList.remove('opacity-50', 'cursor-not-allowed');
-
-                    if (result.trim() === 'Success') {
-                        messageDiv.classList.remove('hidden', 'bg-red-100', 'text-red-700');
-                        messageDiv.classList.add('bg-green-100', 'text-green-700');
-                        messageDiv.innerHTML = 'You\'re all set!<br>Please check your inbox for a calendar invite. See you soon.';
+        // Function to fetch webinar details (for the doGet handler)
+        function fetchWebinarDetails() {
+            fetch(APP_SCRIPT_URL + '?action=getDetails')
+                .then(response => response.json())
+                .then(data => {
+                    if (data && data.date && data.time) {
+                        datePlaceholder.textContent = data.date;
+                        timePlaceholder.textContent = data.time;
                     } else {
-                        messageDiv.classList.remove('hidden', 'bg-green-100', 'text-green-700');
-                        messageDiv.classList.add('bg-red-100', 'text-red-700');
-                        messageDiv.textContent = 'Error: ' + result;
+                        throw new Error('Could not fetch valid webinar details.');
                     }
                 })
                 .catch(error => {
-                    submitButton.disabled = false;
-                    submitButton.classList.remove('opacity-50', 'cursor-not-allowed');
-                    messageDiv.classList.remove('hidden', 'bg-green-100', 'text-green-700');
-                    messageDiv.classList.add('bg-red-100', 'text-red-700');
-                    messageDiv.textContent = 'An error occurred. Please try again.';
+                    console.error('Error fetching webinar details:', error);
+                    datePlaceholder.textContent = 'Date: Error';
+                    timePlaceholder.textContent = 'Time: Error';
                 });
+        }
+
+        // --- Core Form Submission Logic (doPost handler) ---
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            submitButton.disabled = true;
+            submitButton.classList.add('opacity-50', 'cursor-not-allowed');
+            messageDiv.classList.add('hidden');
+
+            const formData = new FormData(form);
+            const data = new URLSearchParams(formData);
+
+            fetch(APP_SCRIPT_URL, {
+                method: 'POST',
+                body: data,
+                redirect: 'follow'
+            })
+            .then(response => {
+                if (!response.ok) {
+                    // Check for non-200 HTTP status codes
+                    throw new Error('Network response was not ok: ' + response.statusText);
+                }
+                return response.text();
+            })
+            .then(result => {
+                // Return to normal state
+                submitButton.disabled = false;
+                submitButton.classList.remove('opacity-50', 'cursor-not-allowed');
+
+                // 🐛 FIX APPLIED HERE: Clean up and normalize the response for a robust check
+                const processedResult = String(result).trim().toUpperCase();
+                
+                messageDiv.classList.remove('hidden', 'bg-red-100', 'text-red-700', 'bg-green-100', 'text-green-700');
+
+                if (processedResult === 'SUCCESS') {
+                    // Success UI
+                    messageDiv.classList.add('bg-green-100', 'text-green-700');
+                    messageDiv.innerHTML = 'You\'re all set! A calendar invite and confirmation email are on the way. See you soon.';
+                    form.reset(); // Clear the form on successful submission
+                } else {
+                    // Failure UI
+                    messageDiv.classList.add('bg-red-100', 'text-red-700');
+                    // Display the raw error message returned by Apps Script for debugging
+                    messageDiv.textContent = 'Registration failed. Server Message: ' + result; 
+                }
+            })
+            .catch(error => {
+                // Handle network errors
+                console.error('Error submitting form:', error);
+                submitButton.disabled = false;
+                submitButton.classList.remove('opacity-50', 'cursor-not-allowed');
+                
+                messageDiv.classList.remove('hidden', 'bg-green-100', 'text-green-700');
+                messageDiv.classList.add('bg-red-100', 'text-red-700');
+                messageDiv.textContent = 'A network error occurred. Please check your connection or try again.';
             });
         });
+
+        // Fetch details on page load
+        fetchWebinarDetails();
     </script>
 </body>
 </html>
-
-
-
-
-
-
