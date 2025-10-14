@@ -1,7 +1,7 @@
 {
   "_explanation": "The 'date' and 'time' fields are for display purposes in forms and emails.",
   "date": "Thursday, October 16, 2025",
-  "time": "11.30pm EST | 8.30am PST | 5.30pm CST",
+  "time": "11.30am EST | 8.30am PST | 5.30pm CST",
   "_explanation2": "The 'standardDateTime' field is used by the script for the calendar invite.",
   "standardDateTime": "2025-10-16T11:30:00-04:00",
   "meetLink": "meet.google.com/kpo-skba-qff"
